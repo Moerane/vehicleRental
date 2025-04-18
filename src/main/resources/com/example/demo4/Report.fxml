@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="592.0" prefWidth="900" style="-fx-background-color: skyblue;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.2" fx:controller="com.example.demo4.ReportController">
+
+    <!-- Title -->
+    <Label layoutX="140.0" layoutY="14.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Reports " />
+
+    <!-- Available Vehicles Pie Chart -->
+    <Label layoutX="30" layoutY="50" text="Available Vehicles" />
+    <Pane layoutX="30" layoutY="70" prefHeight="250" prefWidth="300">
+        <PieChart fx:id="vehiclePieChart" prefHeight="250" prefWidth="300" />
+        <LineChart fx:id="revenueLineChart" layoutX="168.0" layoutY="8.0" prefHeight="200" prefWidth="200">
+            <xAxis>
+                <CategoryAxis label="Month" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Revenue" />
+            </yAxis>
+        </LineChart>
+    </Pane>
+
+    <Label layoutX="278.0" layoutY="50.0" text="Revenue Report" />
+    <Pane layoutX="360" layoutY="70" prefHeight="250" prefWidth="500" />
+
+    <Label layoutX="30" layoutY="340" text="Customer Rental History" />
+    <Pane layoutX="30" layoutY="360" prefHeight="200" prefWidth="500.0">
+        <TableView fx:id="rentalTable" layoutX="14.0" prefHeight="170.0" prefWidth="422.0">
+            <columns>
+                <TableColumn fx:id="colCustomer" prefWidth="79.99999618530273" text="Customer" />
+                <TableColumn fx:id="colVehicle" minWidth="0.0" prefWidth="60.800018310546875" text="Vehicle" />
+                <TableColumn fx:id="colDate" prefWidth="92.80003356933594" text="Rental Date" />
+                <TableColumn fx:id="colDuration" prefWidth="72.0" text="Days" />
+            </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+        </TableView>
+    </Pane>
+
+</AnchorPane>

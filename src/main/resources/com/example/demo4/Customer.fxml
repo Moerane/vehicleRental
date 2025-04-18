@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Anchorpane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.CustomerController">
+   <children>
+      <Label fx:id="lblCustomerManagement" layoutX="167.0" layoutY="23.0" text="Customer Management">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblName" layoutX="14.0" layoutY="98.0" text="Name:" />
+      <Label fx:id="lblContact" layoutX="7.0" layoutY="139.0" text="Contact info:" />
+      <Label fx:id="lblLicence" layoutX="9.0" layoutY="182.0" text="Licence NO:" />
+      <Label fx:id="lblRental" layoutX="9.0" layoutY="222.0" text="Rental History:" />
+      <TextField fx:id="txtName" layoutX="92.0" layoutY="94.0" />
+      <TextField fx:id="txtContact" layoutX="94.0" layoutY="135.0" />
+      <TextField fx:id="txtLicence" layoutX="92.0" layoutY="178.0" />
+      <TextField fx:id="txtRental" layoutX="94.0" layoutY="218.0" />
+      <TableView fx:id="tableview" layoutX="266.0" layoutY="94.0" prefHeight="158.0" prefWidth="286.0">
+        <columns>
+          <TableColumn fx:id="tcName" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="tcContact" prefWidth="75.0" text="Contact info" />
+            <TableColumn fx:id="tcLicence" prefWidth="75.0" text="Licence NO" />
+            <TableColumn fx:id="tcRental" prefWidth="75.0" text="Rental History" />
+        </columns>
+      </TableView>
+      <Button layoutX="201.0" layoutY="289.0" mnemonicParsing="false" onAction="#Register" text="Register" />
+      <Button layoutX="366.0" layoutY="289.0" mnemonicParsing="false" onAction="#Update" text="Update" />
+      <Button layoutX="496.0" layoutY="288.0" mnemonicParsing="false" onAction="#Exit" prefHeight="26.0" prefWidth="55.0" text="Exit" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Anchorpane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.VehicleController">
+   <children>
+      <Label fx:id="lblVehicleMgmt" layoutX="203.0" layoutY="14.0" text="Vehicle Management">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblVehicleID" layoutX="22.0" layoutY="84.0" text="Vehicle ID:" />
+      <Label fx:id="lblBrand" layoutX="15.0" layoutY="128.0" text="Brand&amp;Model:" />
+      <Label fx:id="lblRental" layoutX="15.0" layoutY="217.0" text="Rental Price/day:" />
+      <Label fx:id="lblAvailability" layoutX="11.0" layoutY="264.0" text="Availability Status:" />
+      <TextField fx:id="txtVehicleID" layoutX="114.0" layoutY="80.0" />
+      <TextField fx:id="txtBrand" layoutX="115.0" layoutY="124.0" />
+      <TextField fx:id="txtAvailability" layoutX="115.0" layoutY="260.0" />
+      <TextField fx:id="txtRental" layoutX="115.0" layoutY="213.0" />
+      <TableView fx:id="tbleView" layoutX="286.0" layoutY="93.0" prefHeight="200.0" prefWidth="306.0">
+        <columns>
+          <TableColumn fx:id="tcVehicleID" prefWidth="64.0" text="Vehicle ID" />
+          <TableColumn fx:id="tcBrand" prefWidth="59.20001220703125" text="Brand&amp;Model" />
+            <TableColumn fx:id="tcCategory" prefWidth="54.39996337890625" text="Category" />
+            <TableColumn fx:id="tcRental" prefWidth="53.600067138671875" text="Rental Price/day" />
+            <TableColumn fx:id="tcAvailability" prefWidth="83.99993896484375" text="Availability Status" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="comboBx" layoutX="114.0" layoutY="171.0" prefWidth="150.0" />
+      <Label fx:id="lblCategory" layoutX="15.0" layoutY="175.0" text="Category:" />
+      <TextField fx:id="txtSearch" layoutX="396.0" layoutY="58.0" promptText="Search" />
+      <Button layoutX="300.0" layoutY="58.0" mnemonicParsing="false" onAction="#Search" text="Search" />
+      <Button layoutX="84.0" layoutY="317.0" mnemonicParsing="false" onAction="#add" text="Add" />
+      <Button layoutX="189.0" layoutY="317.0" mnemonicParsing="false" onAction="#Update" text="Update" />
+      <Button layoutX="320.0" layoutY="317.0" mnemonicParsing="false" onAction="#delete" text="Delete" />
+      <Button layoutX="439.0" layoutY="317.0" mnemonicParsing="false" onAction="#Exit" prefHeight="26.0" prefWidth="50.0" text="Exit" />
+   </children>
+</AnchorPane>

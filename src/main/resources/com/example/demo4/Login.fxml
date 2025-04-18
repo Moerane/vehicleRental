@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Anchorpane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: Skyblue;" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.Login">
+   <children>
+      <Label fx:id="lblVehicle" layoutX="164.0" layoutY="46.0" text="Vehicle Rental System Login">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lbUsername" layoutX="91.0" layoutY="113.0" text="Username" />
+      <Label fx:id="lbPassword" layoutX="91.0" layoutY="166.0" text="Password" />
+      <TextField fx:id="txtUsername" layoutX="199.0" layoutY="109.0" />
+      <TextField fx:id="txtPassword" layoutX="199.0" layoutY="162.0" />
+      <Button layoutX="199.0" layoutY="262.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="26.0" prefWidth="54.0" text="Login" />
+      <Label fx:id="lblRole" layoutX="91.0" layoutY="210.0" text="Role:" />
+      <ComboBox fx:id="combobox" layoutX="199.0" layoutY="206.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
